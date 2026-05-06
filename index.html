@@ -20,36 +20,29 @@
 html { scroll-behavior: smooth; }
 body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
 
-/* ── NAV (WHITE) ── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
   height: 64px; display: flex; align-items: center; justify-content: space-between;
   padding: 0 5%; background: var(--white);
-  border-bottom: 1.5px solid var(--border);
-  transition: box-shadow .3s;
+  border-bottom: 1.5px solid var(--border); transition: box-shadow .3s;
 }
 nav.scrolled { box-shadow: 0 2px 14px rgba(0,0,0,.08); }
-.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; cursor: pointer; }
 .logo-icon { width: 36px; height: 36px; background: var(--blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
 .logo-name { color: var(--blue); font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; }
 .logo-sub  { color: var(--muted); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
 .nav-links { display: flex; gap: 26px; list-style: none; }
-.nav-links a { color: var(--text); text-decoration: none; font-size: 13.5px; font-weight: 500; transition: color .2s; }
+.nav-links a { color: var(--text); text-decoration: none; font-size: 13.5px; font-weight: 500; cursor: pointer; transition: color .2s; }
 .nav-links a:hover { color: var(--blue2); }
 .btn-call { background: var(--blue); color: white; border: none; padding: 8px 18px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; }
 .btn-call:hover { background: var(--blue2); }
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
 .hamburger span { display: block; width: 22px; height: 2px; background: var(--blue); border-radius: 2px; }
 
-/* ── PAGES ── */
 .page { display: none; }
 .page.active { display: block; }
 
-/* ── HERO ── */
-.hero {
-  min-height: 88vh; background: var(--blue);
-  display: flex; align-items: center; padding: 100px 5% 60px;
-}
+.hero { min-height: 88vh; background: var(--blue); display: flex; align-items: center; padding: 100px 5% 60px; }
 .hero-inner { max-width: 640px; }
 .hero-tag { display: inline-block; background: rgba(255,255,255,.13); color: rgba(255,255,255,.9); font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 20px; }
 .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 5vw, 54px); font-weight: 900; color: white; line-height: 1.12; margin-bottom: 16px; }
@@ -60,72 +53,45 @@ nav.scrolled { box-shadow: 0 2px 14px rgba(0,0,0,.08); }
 .btn-outline { background: transparent; border: 1.5px solid rgba(255,255,255,.4); color: white; padding: 12px 24px; border-radius: 7px; font-size: 14px; font-weight: 600; text-decoration: none; cursor: pointer; }
 .btn-outline:hover { border-color: white; }
 
-/* ── TRUST BAR ── */
 .trust { background: var(--blue2); padding: 13px 5%; display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; }
 .trust span { color: rgba(255,255,255,.85); font-size: 13px; font-weight: 500; }
 
-/* ── SECTIONS ── */
 .section { padding: 68px 5%; }
 .sec-label { color: var(--blue2); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
 .sec-title { font-family: 'Playfair Display', serif; font-size: clamp(24px, 3.5vw, 36px); font-weight: 900; color: var(--blue); line-height: 1.2; }
 .sec-sub { color: var(--muted); font-size: 15px; margin-top: 8px; }
 .sec-head { margin-bottom: 40px; }
 
-/* ── PRODUCT GRID (HOME) ── */
 .products { background: var(--white); }
 .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; max-width: 1100px; }
-
-.product-card {
-  border: 1.5px solid var(--border); border-radius: 12px; background: var(--white);
-  cursor: pointer; overflow: hidden; transition: border-color .2s, box-shadow .2s;
-  display: flex; flex-direction: column;
-}
+.product-card { border: 1.5px solid var(--border); border-radius: 12px; background: var(--white); cursor: pointer; overflow: hidden; transition: border-color .2s, box-shadow .2s; display: flex; flex-direction: column; }
 .product-card:hover { border-color: var(--blue2); box-shadow: 0 4px 18px rgba(11,61,110,.1); }
-.product-card img { width: 100%; height: 140px; object-fit: cover; display: block; background: var(--bg); }
 .product-img-placeholder { width: 100%; height: 140px; background: linear-gradient(135deg, #e8edf3, #d0dcea); display: flex; align-items: center; justify-content: center; font-size: 42px; }
 .product-head { display: flex; align-items: center; gap: 12px; padding: 14px 16px; }
 .p-name { font-weight: 600; font-size: 14.5px; color: var(--blue); flex: 1; }
 .p-arrow { color: var(--blue2); font-size: 18px; font-weight: 700; }
 
-/* ── PRODUCT DETAIL PAGE ── */
 #product-page { padding-top: 64px; }
-.pd-header {
-  background: var(--blue); padding: 40px 5% 36px;
-}
-.pd-back {
-  display: inline-flex; align-items: center; gap: 8px;
-  color: rgba(255,255,255,.75); font-size: 13px; font-weight: 600;
-  cursor: pointer; margin-bottom: 18px; border: none; background: none; text-decoration: none;
-  letter-spacing: .3px;
-}
+.pd-header { background: var(--blue); padding: 40px 5% 36px; }
+.pd-back { display: inline-flex; align-items: center; gap: 8px; color: rgba(255,255,255,.75); font-size: 13px; font-weight: 600; cursor: pointer; margin-bottom: 18px; border: none; background: none; }
 .pd-back:hover { color: white; }
 .pd-icon { font-size: 38px; margin-bottom: 10px; display: block; }
 .pd-title { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 40px); font-weight: 900; color: white; }
 .pd-subtitle { color: rgba(255,255,255,.6); font-size: 15px; margin-top: 8px; }
-
-.pd-body { background: var(--bg); padding: 40px 5%; max-width: 900px; margin: 0 auto; }
 .pd-list-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--blue); margin-bottom: 16px; }
 .pd-items { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-bottom: 36px; }
-.pd-item {
-  background: white; border: 1.5px solid var(--border);
-  border-radius: 10px; padding: 14px 16px;
-  font-size: 14px; font-weight: 500; color: var(--text);
-  display: flex; align-items: center; gap: 10px;
-  transition: border-color .2s;
-}
+.pd-item { background: white; border: 1.5px solid var(--border); border-radius: 10px; padding: 14px 16px; font-size: 14px; font-weight: 500; color: var(--text); display: flex; align-items: center; gap: 10px; transition: border-color .2s; }
 .pd-item:hover { border-color: var(--blue2); color: var(--blue); }
 .pd-item::before { content: '›'; color: var(--blue2); font-weight: 800; font-size: 16px; }
-
 .pd-cta { background: var(--blue); border-radius: 14px; padding: 30px 28px; display: flex; flex-direction: column; gap: 14px; }
 .pd-cta h4 { font-family: 'Playfair Display', serif; font-size: 19px; color: white; }
 .pd-cta p { color: rgba(255,255,255,.6); font-size: 14px; line-height: 1.6; }
 .pd-cta-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 .btn-cta-call { background: white; color: var(--blue); border: none; border-radius: 8px; padding: 12px 22px; font-size: 14px; font-weight: 700; text-decoration: none; cursor: pointer; }
 .btn-cta-call:hover { opacity: .9; }
-.btn-cta-wa { background: #25D366; color: white; border: none; border-radius: 8px; padding: 12px 22px; font-size: 14px; font-weight: 700; text-decoration: none; cursor: pointer; }
+.btn-cta-wa { background: #25D366; color: white; border: none; border-radius: 8px; padding: 12px 22px; font-size: 14px; font-weight: 700; text-decoration: none; }
 .btn-cta-wa:hover { background: #1ebe5a; }
 
-/* ── WHY ── */
 .why { background: var(--bg); }
 .why-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; max-width: 1100px; }
 .why-card { background: white; border: 1.5px solid var(--border); border-radius: 12px; padding: 22px 18px; transition: border-color .2s; }
@@ -134,43 +100,67 @@ nav.scrolled { box-shadow: 0 2px 14px rgba(0,0,0,.08); }
 .w-title { font-weight: 700; font-size: 14.5px; color: var(--blue); margin-bottom: 6px; }
 .w-text { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
 
-/* ── BRANDS ── */
 .brands { background: var(--white); }
 .brands-wrap { display: flex; flex-wrap: wrap; gap: 10px; max-width: 860px; }
 .brand-tag { border: 1.5px solid var(--border); border-radius: 8px; padding: 9px 20px; font-size: 13.5px; font-weight: 600; color: var(--blue); background: var(--bg); transition: border-color .2s, color .2s; }
 .brand-tag:hover { border-color: var(--blue2); color: var(--blue2); }
 
-/* ── CONTACT ── */
 .contact { background: var(--bg); }
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; max-width: 960px; margin-bottom: 36px; }
-.contact-items { display: flex; flex-direction: column; gap: 16px; }
+.contact-items { display: flex; flex-direction: column; gap: 20px; }
+
+/* Contact person cards */
+.person-cards { display: flex; flex-direction: column; gap: 12px; }
+.person-card {
+  background: white; border: 1.5px solid var(--border); border-radius: 12px;
+  padding: 16px 18px; display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; transition: border-color .2s;
+}
+.person-card:hover { border-color: var(--blue2); }
+.person-info { display: flex; flex-direction: column; }
+.person-name { font-weight: 700; font-size: 15px; color: var(--blue); }
+.person-role { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+.person-num { font-size: 15px; font-weight: 600; color: var(--text); }
+.person-actions { display: flex; gap: 8px; }
+.person-actions a {
+  width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center;
+  justify-content: center; font-size: 16px; text-decoration: none;
+  border: 1.5px solid var(--border); background: var(--bg); transition: border-color .2s;
+}
+.person-actions a:hover { border-color: var(--blue2); }
+.person-actions .wa-btn { background: #e6faf0; border-color: #b2dfcc; }
+.person-actions .wa-btn:hover { background: #25D366; border-color: #25D366; }
+
 .ci { display: flex; align-items: flex-start; gap: 14px; }
 .ci-ico { width: 40px; height: 40px; border-radius: 10px; background: var(--blue); display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
 .ci-label { font-size: 11px; font-weight: 700; color: var(--blue2); text-transform: uppercase; letter-spacing: 1px; }
-.ci-val { font-size: 15px; font-weight: 600; color: var(--text); }
+.ci-val { font-size: 15px; font-weight: 600; color: var(--text); line-height: 1.5; }
 .ci-val a { color: inherit; text-decoration: none; }
 .ci-val a:hover { color: var(--blue2); }
-.cta-box { background: var(--blue); border-radius: 14px; padding: 34px 28px; }
-.cta-box h4 { font-family: 'Playfair Display', serif; font-size: 21px; color: white; margin-bottom: 10px; }
-.cta-box p { color: rgba(255,255,255,.6); font-size: 14px; line-height: 1.6; margin-bottom: 22px; }
-.cta-box .btn-cta-call { display: flex; align-items: center; justify-content: center; font-size: 15px; padding: 13px; }
 
-/* ── MAP ── */
+.cta-box { background: var(--blue); border-radius: 14px; padding: 34px 28px; display: flex; flex-direction: column; gap: 14px; }
+.cta-box h4 { font-family: 'Playfair Display', serif; font-size: 21px; color: white; }
+.cta-box p { color: rgba(255,255,255,.6); font-size: 14px; line-height: 1.6; }
+.cta-btns { display: flex; flex-direction: column; gap: 10px; }
+.cta-btns a { display: flex; align-items: center; justify-content: center; gap: 8px; border-radius: 8px; padding: 13px; font-size: 14px; font-weight: 700; text-decoration: none; }
+.cta-call1 { background: white; color: var(--blue); }
+.cta-call1:hover { opacity: .9; }
+.cta-call2 { background: rgba(255,255,255,.12); border: 1.5px solid rgba(255,255,255,.25); color: white; }
+.cta-call2:hover { background: rgba(255,255,255,.2); }
+
 .map-wrap { max-width: 960px; border-radius: 12px; overflow: hidden; border: 1.5px solid var(--border); }
-.map-wrap iframe { display: block; width: 100%; height: 250px; border: 0; }
+.map-wrap iframe { display: block; width: 100%; height: 260px; border: 0; }
 
-/* ── FOOTER ── */
 footer { background: var(--blue); color: rgba(255,255,255,.5); padding: 26px 5%; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; align-items: center; }
 .f-brand { font-family: 'Playfair Display', serif; color: white; font-size: 15px; font-weight: 700; }
+.f-sub { font-size: 12px; margin-top: 3px; }
 .f-links { display: flex; gap: 18px; }
 .f-links a { color: rgba(255,255,255,.45); font-size: 13px; text-decoration: none; cursor: pointer; }
 .f-links a:hover { color: white; }
 
-/* ── REVEAL ── */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .5s, transform .5s; }
 .reveal.on { opacity: 1; transform: none; }
 
-/* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
@@ -183,36 +173,35 @@ footer { background: var(--blue); color: rgba(255,255,255,.5); padding: 26px 5%;
 </head>
 <body>
 
-<!-- NAV -->
 <nav id="nav">
-  <a class="logo" href="#" onclick="showHome()">
+  <div class="logo" onclick="showHome()">
     <div class="logo-icon">🔧</div>
     <div>
       <div class="logo-name">Ever Stone Associates</div>
       <div class="logo-sub">Plumbing &amp; Sanitary</div>
     </div>
-  </a>
+  </div>
   <ul class="nav-links">
-    <li><a href="#" onclick="showHome(); scrollTo('#products')">Products</a></li>
-    <li><a href="#" onclick="showHome(); scrollTo('#why')">Why Us</a></li>
-    <li><a href="#" onclick="showHome(); scrollTo('#brands')">Brands</a></li>
-    <li><a href="#" onclick="showHome(); scrollTo('#contact')">Contact</a></li>
+    <li><a onclick="showHome(); setTimeout(()=>document.getElementById('products').scrollIntoView({behavior:'smooth'}),10)">Products</a></li>
+    <li><a onclick="showHome(); setTimeout(()=>document.getElementById('why').scrollIntoView({behavior:'smooth'}),10)">Why Us</a></li>
+    <li><a onclick="showHome(); setTimeout(()=>document.getElementById('brands').scrollIntoView({behavior:'smooth'}),10)">Brands</a></li>
+    <li><a onclick="showHome(); setTimeout(()=>document.getElementById('contact').scrollIntoView({behavior:'smooth'}),10)">Contact</a></li>
   </ul>
-  <a href="tel:9496424163" class="btn-call">📞 Call Now</a>
-  <button class="hamburger" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
+  <a href="tel:8714824163" class="btn-call">📞 Call Now</a>
+  <button class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></button>
 </nav>
 
-<!-- ══════════════ HOME PAGE ══════════════ -->
+<!-- ══ HOME PAGE ══ -->
 <div id="home-page" class="page active">
 
   <section class="hero">
     <div class="hero-inner">
-      <div class="hero-tag">Kozhikode, Kerala</div>
+      <div class="hero-tag">Pariyangad, Kozhikode</div>
       <h1>Your Trusted Plumbing &amp; Sanitary Partner</h1>
       <p>Quality pipes, fittings, taps and sanitary products for homes, builders and plumbers — all under one roof.</p>
       <div class="hero-btns">
         <button class="btn-white" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">View Products</button>
-        <a href="https://wa.me/919496424163" class="btn-white" target="_blank">WhatsApp Us</a>
+        <a href="https://wa.me/918714824163" class="btn-white" target="_blank">WhatsApp Us</a>
         <button class="btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Us</button>
       </div>
     </div>
@@ -225,7 +214,6 @@ footer { background: var(--blue); color: rgba(255,255,255,.5); padding: 26px 5%;
     <span>🤝 Contractor Pricing Available</span>
   </div>
 
-  <!-- PRODUCTS -->
   <section class="section products" id="products">
     <div class="sec-head reveal">
       <div class="sec-label">What We Sell</div>
@@ -233,51 +221,41 @@ footer { background: var(--blue); color: rgba(255,255,255,.5); padding: 26px 5%;
       <p class="sec-sub">Tap any category to explore what we carry.</p>
     </div>
     <div class="products-grid">
-
       <div class="product-card reveal" onclick="openProduct('pvc')">
         <div class="product-img-placeholder">🔵</div>
         <div class="product-head"><span class="p-name">PVC Pipes &amp; Fittings</span><span class="p-arrow">›</span></div>
       </div>
-
       <div class="product-card reveal" onclick="openProduct('cpvc')">
         <div class="product-img-placeholder">🟠</div>
         <div class="product-head"><span class="p-name">CPVC Pipes</span><span class="p-arrow">›</span></div>
       </div>
-
       <div class="product-card reveal" onclick="openProduct('taps')">
         <div class="product-img-placeholder">🚿</div>
         <div class="product-head"><span class="p-name">Taps &amp; Faucets</span><span class="p-arrow">›</span></div>
       </div>
-
       <div class="product-card reveal" onclick="openProduct('sanitary')">
         <div class="product-img-placeholder">🛁</div>
         <div class="product-head"><span class="p-name">Sanitary Ware</span><span class="p-arrow">›</span></div>
       </div>
-
       <div class="product-card reveal" onclick="openProduct('hardware')">
         <div class="product-img-placeholder">🔩</div>
         <div class="product-head"><span class="p-name">Hardware &amp; Valves</span><span class="p-arrow">›</span></div>
       </div>
-
       <div class="product-card reveal" onclick="openProduct('hoses')">
         <div class="product-img-placeholder">🌊</div>
         <div class="product-head"><span class="p-name">Hoses &amp; Flexible Pipes</span><span class="p-arrow">›</span></div>
       </div>
-
       <div class="product-card reveal" onclick="openProduct('pumps')">
         <div class="product-img-placeholder">⚡</div>
         <div class="product-head"><span class="p-name">Water Pumps &amp; Motors</span><span class="p-arrow">›</span></div>
       </div>
-
       <div class="product-card reveal" onclick="openProduct('tanks')">
         <div class="product-img-placeholder">🪣</div>
         <div class="product-head"><span class="p-name">Water Tanks</span><span class="p-arrow">›</span></div>
       </div>
-
     </div>
   </section>
 
-  <!-- WHY US -->
   <section class="section why" id="why">
     <div class="sec-head reveal">
       <div class="sec-label">Why Us</div>
@@ -307,7 +285,6 @@ footer { background: var(--blue); color: rgba(255,255,255,.5); padding: 26px 5%;
     </div>
   </section>
 
-  <!-- BRANDS -->
   <section class="section brands" id="brands">
     <div class="sec-head reveal">
       <div class="sec-label">Brands</div>
@@ -323,46 +300,86 @@ footer { background: var(--blue); color: rgba(255,255,255,.5); padding: 26px 5%;
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section class="section contact" id="contact">
     <div class="sec-head reveal">
       <div class="sec-label">Contact</div>
       <h2 class="sec-title">Get In Touch</h2>
     </div>
     <div class="contact-grid">
+
+      <!-- Left: contact details -->
       <div class="contact-items reveal">
-        <div class="ci">
-          <div class="ci-ico">📞</div>
-          <div><div class="ci-label">Phone</div><div class="ci-val"><a href="tel:9496424163">9496424163</a></div></div>
+
+        <!-- Person cards -->
+        <div class="person-cards">
+          <div class="person-card">
+            <div class="person-info">
+              <span class="person-name">Prakash</span>
+              <span class="person-role">Ever Stone Associates</span>
+              <span class="person-num">8714 824 163</span>
+            </div>
+            <div class="person-actions">
+              <a href="tel:8714824163" title="Call Prakash">📞</a>
+              <a href="https://wa.me/918714824163" class="wa-btn" target="_blank" title="WhatsApp Prakash">💬</a>
+            </div>
+          </div>
+          <div class="person-card">
+            <div class="person-info">
+              <span class="person-name">Sunil</span>
+              <span class="person-role">Ever Stone Associates</span>
+              <span class="person-num">7736 923 355</span>
+            </div>
+            <div class="person-actions">
+              <a href="tel:7736923355" title="Call Sunil">📞</a>
+              <a href="https://wa.me/917736923355" class="wa-btn" target="_blank" title="WhatsApp Sunil">💬</a>
+            </div>
+          </div>
         </div>
-        <div class="ci">
-          <div class="ci-ico">💬</div>
-          <div><div class="ci-label">WhatsApp</div><div class="ci-val"><a href="https://wa.me/919496424163" target="_blank">+91 9496424163</a></div></div>
-        </div>
+
+        <!-- Address & hours -->
         <div class="ci">
           <div class="ci-ico">📍</div>
-          <div><div class="ci-label">Location</div><div class="ci-val">Kozhikode, Kerala</div></div>
+          <div>
+            <div class="ci-label">Address</div>
+            <div class="ci-val">6/27A, Sarada Arcade, Pariyangad,<br>Cherukulathoor (P.O.),<br>Kozhikode – 673008</div>
+          </div>
         </div>
         <div class="ci">
           <div class="ci-ico">⏰</div>
-          <div><div class="ci-label">Working Hours</div><div class="ci-val">Mon – Sat: 9:00 AM – 7:00 PM</div></div>
+          <div>
+            <div class="ci-label">Working Hours</div>
+            <div class="ci-val">Mon – Sat: 9:00 AM – 7:00 PM</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: CTA box -->
+      <div class="cta-box reveal">
+        <h4>Need a quick quote?</h4>
+        <p>Tell us what you need — product name, size, or quantity — and we'll give you availability and price right away.</p>
+        <div class="cta-btns">
+          <a href="tel:8714824163" class="cta-call1">📞 Call Prakash — 8714 824 163</a>
+          <a href="tel:7736923355" class="cta-call2">📞 Call Sunil — 7736 923 355</a>
         </div>
       </div>
-      <div class="cta-box reveal">
-        <h4>Call us for a quick quote</h4>
-        <p>Tell us what you need — product name, size, or quantity — and we'll give you availability and price right away.</p>
-        <a href="tel:9496424163" class="btn-cta-call">📞 Call 9496424163</a>
-      </div>
+
     </div>
+
+    <!-- Map pointing to Pariyangad, Kozhikode -->
     <div class="map-wrap reveal">
-      <iframe src="https://maps.google.com/maps?q=Kozhikode&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe>
+      <iframe
+        src="https://maps.google.com/maps?q=Pariyangad,Cherukulathoor,Kozhikode,Kerala&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        loading="lazy" allowfullscreen>
+      </iframe>
     </div>
   </section>
 
   <footer>
     <div>
       <div class="f-brand">Ever Stone Associates</div>
-      <div style="font-size:12px;margin-top:3px">© 2026 · Kozhikode, Kerala</div>
+      <div class="f-sub">6/27A Sarada Arcade, Pariyangad, Kozhikode – 673008</div>
+      <div class="f-sub" style="margin-top:2px">© 2026 · All rights reserved</div>
     </div>
     <div class="f-links">
       <a onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Products</a>
@@ -374,36 +391,30 @@ footer { background: var(--blue); color: rgba(255,255,255,.5); padding: 26px 5%;
 
 </div><!-- end home-page -->
 
-
-<!-- ══════════════ PRODUCT DETAIL PAGE ══════════════ -->
+<!-- ══ PRODUCT DETAIL PAGE ══ -->
 <div id="product-page" class="page">
-
   <div class="pd-header">
     <button class="pd-back" onclick="showHome()">← Back to Products</button>
     <span class="pd-icon" id="pd-icon"></span>
     <div class="pd-title" id="pd-title"></div>
     <div class="pd-subtitle" id="pd-subtitle"></div>
   </div>
-
   <div style="padding: 40px 5%; max-width: 960px; margin: 0 auto;">
     <div class="pd-list-title">Available Items</div>
     <div class="pd-items" id="pd-items"></div>
-
     <div class="pd-cta">
       <h4>Interested in these products?</h4>
       <p>Call or WhatsApp us with the item name and we'll confirm price and availability immediately.</p>
       <div class="pd-cta-btns">
-        <a href="tel:9496424163" class="btn-cta-call">📞 Call 9496424163</a>
-        <a href="https://wa.me/919496424163" class="btn-cta-wa" target="_blank">💬 WhatsApp Us</a>
+        <a href="tel:8714824163" class="btn-cta-call">📞 Prakash – 8714 824 163</a>
+        <a href="tel:7736923355" class="btn-cta-call">📞 Sunil – 7736 923 355</a>
+        <a href="https://wa.me/918714824163" class="btn-cta-wa" target="_blank">💬 WhatsApp</a>
       </div>
     </div>
   </div>
-
-</div><!-- end product-page -->
-
+</div>
 
 <script>
-// ── Product Data ──
 const products = {
   pvc: {
     icon: '🔵', title: 'PVC Pipes & Fittings',
@@ -447,7 +458,6 @@ const products = {
   }
 };
 
-// ── Navigation ──
 function showHome() {
   document.getElementById('home-page').classList.add('active');
   document.getElementById('product-page').classList.remove('active');
@@ -456,32 +466,26 @@ function showHome() {
 
 function openProduct(key) {
   const p = products[key];
-  document.getElementById('pd-icon').textContent    = p.icon;
-  document.getElementById('pd-title').textContent   = p.title;
+  document.getElementById('pd-icon').textContent     = p.icon;
+  document.getElementById('pd-title').textContent    = p.title;
   document.getElementById('pd-subtitle').textContent = p.subtitle;
-
-  const container = document.getElementById('pd-items');
-  container.innerHTML = p.items.map(item => `<div class="pd-item">${item}</div>`).join('');
-
+  document.getElementById('pd-items').innerHTML = p.items.map(i => `<div class="pd-item">${i}</div>`).join('');
   document.getElementById('home-page').classList.remove('active');
   document.getElementById('product-page').classList.add('active');
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
-// ── Navbar scroll shadow ──
 window.addEventListener('scroll', () => {
   document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
 });
 
-// ── Mobile menu ──
-function toggleNav(btn) {
+function toggleNav() {
   const ul = document.querySelector('.nav-links');
   const open = ul.style.display === 'flex';
   ul.style.cssText = open ? '' :
-    'display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:white;padding:18px 5%;gap:14px;border-bottom:1.5px solid #d5e0ed;';
+    'display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:white;padding:18px 5%;gap:14px;border-bottom:1.5px solid #d5e0ed;z-index:199;';
 }
 
-// ── Scroll reveal ──
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
 }, { threshold: 0.1 });
