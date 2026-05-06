@@ -46,7 +46,7 @@ nav.scrolled { box-shadow: 0 2px 14px rgba(0,0,0,.08); }
 .hero-inner { max-width: 640px; }
 .hero-tag { display: inline-block; background: rgba(255,255,255,.13); color: rgba(255,255,255,.9); font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 20px; }
 .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 5vw, 54px); font-weight: 900; color: white; line-height: 1.12; margin-bottom: 16px; }
-.hero p { color: rgba(255,255,255,.65); font-size: 16px; line-height: 1.7; margin-bottom: 30px; }
+.hero p { color: rgba(255,255,255,.65); font-size: 16px; line-height: 1.7; margin-bottom: 14px; }
 .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 .btn-white { background: white; color: var(--blue); padding: 12px 24px; border-radius: 7px; font-size: 14px; font-weight: 600; text-decoration: none; border: none; cursor: pointer; }
 .btn-white:hover { opacity: .9; }
@@ -64,8 +64,10 @@ nav.scrolled { box-shadow: 0 2px 14px rgba(0,0,0,.08); }
 
 .products { background: var(--white); }
 .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; max-width: 1100px; }
-.product-card { border: 1.5px solid var(--border); border-radius: 12px; background: var(--white); cursor: pointer; overflow: hidden; transition: border-color .2s, box-shadow .2s; display: flex; flex-direction: column; }
-.product-card:hover { border-color: var(--blue2); box-shadow: 0 4px 18px rgba(11,61,110,.1); }
+.product-card { border: 1.5px solid var(--border); border-radius: 12px; background: var(--white); cursor: pointer; overflow: hidden; transition: border-color .2s, box-shadow .2s, transform .2s; display: flex; flex-direction: column; }
+.product-card:hover { border-color: var(--blue2); box-shadow: 0 8px 24px rgba(11,61,110,.13); transform: translateY(-5px); }
+.wa-float { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; width: 54px; height: 54px; border-radius: 50%; font-size: 24px; text-decoration: none; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(0,0,0,.25); z-index: 999; transition: transform .2s, box-shadow .2s; }
+.wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(37,211,102,.5); }
 .product-img-placeholder { width: 100%; height: 140px; background: linear-gradient(135deg, #e8edf3, #d0dcea); display: flex; align-items: center; justify-content: center; font-size: 42px; }
 .product-head { display: flex; align-items: center; gap: 12px; padding: 14px 16px; }
 .p-name { font-weight: 600; font-size: 14.5px; color: var(--blue); flex: 1; }
@@ -199,9 +201,10 @@ footer { background: var(--blue); color: rgba(255,255,255,.5); padding: 26px 5%;
       <div class="hero-tag">Pariyangad, Kozhikode</div>
       <h1>Your Trusted Plumbing &amp; Sanitary Partner</h1>
       <p>Quality pipes, fittings, taps and sanitary products for homes, builders and plumbers — all under one roof.</p>
+      <p style="color:rgba(255,255,255,.9);font-weight:600;font-size:14px;margin-bottom:30px;">✔ Trusted by Contractors &nbsp;|&nbsp; ✔ ISI Certified Stock &nbsp;|&nbsp; ✔ Best Price Guaranteed</p>
       <div class="hero-btns">
         <button class="btn-white" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">View Products</button>
-        <a href="https://wa.me/918714824163" class="btn-white" target="_blank">WhatsApp Us</a>
+        <a href="https://wa.me/918714824163?text=Hi%20I%20need%20details%20about%20your%20products" class="btn-white" target="_blank">WhatsApp Us</a>
         <button class="btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Us</button>
       </div>
     </div>
@@ -320,7 +323,7 @@ footer { background: var(--blue); color: rgba(255,255,255,.5); padding: 26px 5%;
             </div>
             <div class="person-actions">
               <a href="tel:8714824163" title="Call Prakash">📞</a>
-              <a href="https://wa.me/918714824163" class="wa-btn" target="_blank" title="WhatsApp Prakash">💬</a>
+              <a href="https://wa.me/918714824163?text=Hi%20I%20need%20details%20about%20your%20products" class="wa-btn" target="_blank" title="WhatsApp Prakash">💬</a>
             </div>
           </div>
           <div class="person-card">
@@ -331,7 +334,7 @@ footer { background: var(--blue); color: rgba(255,255,255,.5); padding: 26px 5%;
             </div>
             <div class="person-actions">
               <a href="tel:7736923355" title="Call Sunil">📞</a>
-              <a href="https://wa.me/917736923355" class="wa-btn" target="_blank" title="WhatsApp Sunil">💬</a>
+              <a href="https://wa.me/917736923355?text=Hi%20I%20need%20details%20about%20your%20products" class="wa-btn" target="_blank" title="WhatsApp Sunil">💬</a>
             </div>
           </div>
         </div>
@@ -408,7 +411,7 @@ footer { background: var(--blue); color: rgba(255,255,255,.5); padding: 26px 5%;
       <div class="pd-cta-btns">
         <a href="tel:8714824163" class="btn-cta-call">📞 Prakash – 8714 824 163</a>
         <a href="tel:7736923355" class="btn-cta-call">📞 Sunil – 7736 923 355</a>
-        <a href="https://wa.me/918714824163" class="btn-cta-wa" target="_blank">💬 WhatsApp</a>
+        <a href="https://wa.me/918714824163?text=Hi%2C%20I%20am%20interested%20in%20a%20product%20from%20Ever%20Stone%20Associates" class="btn-cta-wa" target="_blank">💬 Ask About This Product</a>
       </div>
     </div>
   </div>
@@ -491,5 +494,8 @@ const obs = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/918714824163?text=Hi%20I%20need%20details%20about%20your%20products" class="wa-float" target="_blank" title="Chat on WhatsApp">💬</a>
+
 </body>
 </html>
