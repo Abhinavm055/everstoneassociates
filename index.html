@@ -22,15 +22,16 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
 
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-  height: 64px; display: flex; align-items: center; justify-content: space-between;
+  height: 76px; display: flex; align-items: center; justify-content: space-between;
   padding: 0 5%; background: var(--white);
   border-bottom: 1.5px solid var(--border); transition: box-shadow .3s;
 }
 nav.scrolled { box-shadow: 0 2px 14px rgba(0,0,0,.08); }
-.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; cursor: pointer; }
-.logo-icon { width: 36px; height: 36px; background: var(--blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
-.logo-name { color: var(--blue); font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; }
-.logo-sub  { color: var(--muted); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; cursor: pointer; }
+.logo-icon { width: 48px; height: 48px; background: var(--blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.logo-icon svg { width: 32px; height: 32px; }
+.logo-name { color: var(--blue); font-family: 'Playfair Display', serif; font-size: 23px; font-weight: 900; letter-spacing: .4px; line-height: 1; }
+.logo-sub  { color: var(--muted); font-size: 11.5px; letter-spacing: 1px; text-transform: uppercase; font-weight: 500; margin-top: 3px; }
 .nav-links { display: flex; gap: 26px; list-style: none; }
 .nav-links a { color: var(--text); text-decoration: none; font-size: 13.5px; font-weight: 500; cursor: pointer; transition: color .2s; }
 .nav-links a:hover { color: var(--blue2); }
@@ -73,7 +74,7 @@ nav.scrolled { box-shadow: 0 2px 14px rgba(0,0,0,.08); }
 .p-name { font-weight: 600; font-size: 14.5px; color: var(--blue); flex: 1; }
 .p-arrow { color: var(--blue2); font-size: 18px; font-weight: 700; }
 
-#product-page { padding-top: 64px; }
+#product-page { padding-top: 76px; }
 .pd-header { background: var(--blue); padding: 40px 5% 36px; }
 .pd-back { display: inline-flex; align-items: center; gap: 8px; color: rgba(255,255,255,.75); font-size: 13px; font-weight: 600; cursor: pointer; margin-bottom: 18px; border: none; background: none; }
 .pd-back:hover { color: white; }
@@ -177,7 +178,13 @@ footer { background: var(--blue); color: rgba(255,255,255,.5); padding: 26px 5%;
 
 <nav id="nav">
   <div class="logo" onclick="showHome()">
-    <div class="logo-icon">🔧</div>
+    <div class="logo-icon">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- E -->
+        <text x="1" y="23" font-family="Georgia, serif" font-size="17" font-weight="900" fill="white" letter-spacing="-1">ES</text>
+        <line x1="0" y1="28" x2="32" y2="28" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+      </svg>
+    </div>
     <div>
       <div class="logo-name">Ever Stone Associates</div>
       <div class="logo-sub">Plumbing &amp; Sanitary</div>
@@ -198,10 +205,11 @@ footer { background: var(--blue); color: rgba(255,255,255,.5); padding: 26px 5%;
 
   <section class="hero">
     <div class="hero-inner">
-      <div class="hero-tag">Pariyangad, Kozhikode</div>
-      <h1>Your Trusted Plumbing &amp; Sanitary Partner</h1>
-      <p>Quality pipes, fittings, taps and sanitary products for homes, builders and plumbers — all under one roof.</p>
-      <p style="color:rgba(255,255,255,.9);font-weight:600;font-size:14px;margin-bottom:30px;">✔ Trusted by Contractors &nbsp;|&nbsp; ✔ ISI Certified Stock &nbsp;|&nbsp; ✔ Best Price Guaranteed</p>
+      <div style="color:rgba(255,255,255,.5);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;">Ever Stone Associates</div>
+      <div class="hero-tag">📍 Pariyangad, Kozhikode</div>
+      <h1>Everything for Your Plumbing — One Shop, Best Price</h1>
+      <p>Pipes, taps, sanitary fittings and more. Walk in or call — we'll sort it out for you.</p>
+      <p style="color:rgba(255,255,255,.85);font-weight:600;font-size:14px;margin-bottom:30px;">✔ 10+ Years Experience &nbsp;|&nbsp; ✔ Available Today &nbsp;|&nbsp; ✔ Wholesale &amp; Retail</p>
       <div class="hero-btns">
         <button class="btn-white" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">View Products</button>
         <a href="https://wa.me/918714824163?text=Hi%20I%20need%20details%20about%20your%20products" class="btn-white" target="_blank">WhatsApp Us</a>
@@ -486,7 +494,7 @@ function toggleNav() {
   const ul = document.querySelector('.nav-links');
   const open = ul.style.display === 'flex';
   ul.style.cssText = open ? '' :
-    'display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:white;padding:18px 5%;gap:14px;border-bottom:1.5px solid #d5e0ed;z-index:199;';
+    'display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:white;padding:18px 5%;gap:14px;border-bottom:1.5px solid #d5e0ed;z-index:199;';
 }
 
 const obs = new IntersectionObserver(entries => {
