@@ -4,14 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Ever Stone Associates - Plumbing, sanitary, pipes, taps in Kozhikode. Best price and quality products.">
+<!-- 5. SEO IMPROVEMENT -->
+<meta name="keywords" content="PVC pipes Kozhikode, sanitary ware Kozhikode, plumbing materials Kerala, CPVC pipes Kozhikode, Ever Stone Kozhikode">
 <title>Ever Stone Associates – Plumbing & Sanitary, Kozhikode</title>
+
+<!-- 3. FAVICON -->
+<link rel="icon" href="favicon.png">
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
   --blue:   #0b3d6e;
   --blue2:  #1560a8;
   --white:  #ffffff;
-  --bg:     #f4f7fb;
+  --bg:      #f4f7fb;
   --border: #d5e0ed;
   --text:   #2c3e50;
   --muted:  #6b8099;
@@ -40,9 +46,6 @@ nav.scrolled { box-shadow: 0 2px 14px rgba(0,0,0,.08); }
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
 .hamburger span { display: block; width: 22px; height: 2px; background: var(--blue); border-radius: 2px; }
 
-.page { display: none; }
-.page.active { display: block; }
-
 .hero { min-height: 88vh; background: var(--blue); display: flex; align-items: center; padding: 100px 5% 60px; }
 .hero-inner { max-width: 640px; }
 .hero-tag { display: inline-block; background: rgba(255,255,255,.13); color: rgba(255,255,255,.9); font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 20px; }
@@ -65,35 +68,13 @@ nav.scrolled { box-shadow: 0 2px 14px rgba(0,0,0,.08); }
 
 .products { background: var(--white); }
 .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; max-width: 1100px; }
-.product-card { border: 1.5px solid var(--border); border-radius: 12px; background: var(--white); cursor: pointer; overflow: hidden; transition: border-color .2s, box-shadow .2s, transform .2s; display: flex; flex-direction: column; }
-.product-card:hover { border-color: var(--blue2); box-shadow: 0 8px 24px rgba(11,61,110,.13); transform: translateY(-5px); }
-.wa-float { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; width: 54px; height: 54px; border-radius: 50%; font-size: 24px; text-decoration: none; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(0,0,0,.25); z-index: 999; transition: transform .2s, box-shadow .2s; }
-.wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(37,211,102,.5); }
-.product-img-placeholder { width: 100%; height: 140px; background: linear-gradient(135deg, #e8edf3, #d0dcea); display: flex; align-items: center; justify-content: center; font-size: 42px; }
+.product-card { border: 1.5px solid var(--border); border-radius: 12px; background: var(--white); overflow: hidden; display: flex; flex-direction: column; }
+.product-img { width: 100%; height: 170px; background-size: cover; background-position: center; border-bottom: 1px solid var(--border); }
 .product-head { display: flex; align-items: center; gap: 12px; padding: 14px 16px; }
 .p-name { font-weight: 600; font-size: 14.5px; color: var(--blue); flex: 1; }
-.p-arrow { color: var(--blue2); font-size: 18px; font-weight: 700; }
 
-#product-page { padding-top: 76px; }
-.pd-header { background: var(--blue); padding: 40px 5% 36px; }
-.pd-back { display: inline-flex; align-items: center; gap: 8px; color: rgba(255,255,255,.75); font-size: 13px; font-weight: 600; cursor: pointer; margin-bottom: 18px; border: none; background: none; }
-.pd-back:hover { color: white; }
-.pd-icon { font-size: 38px; margin-bottom: 10px; display: block; }
-.pd-title { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 40px); font-weight: 900; color: white; }
-.pd-subtitle { color: rgba(255,255,255,.6); font-size: 15px; margin-top: 8px; }
-.pd-list-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--blue); margin-bottom: 16px; }
-.pd-items { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-bottom: 36px; }
-.pd-item { background: white; border: 1.5px solid var(--border); border-radius: 10px; padding: 14px 16px; font-size: 14px; font-weight: 500; color: var(--text); display: flex; align-items: center; gap: 10px; transition: border-color .2s; }
-.pd-item:hover { border-color: var(--blue2); color: var(--blue); }
-.pd-item::before { content: '›'; color: var(--blue2); font-weight: 800; font-size: 16px; }
-.pd-cta { background: var(--blue); border-radius: 14px; padding: 30px 28px; display: flex; flex-direction: column; gap: 14px; }
-.pd-cta h4 { font-family: 'Playfair Display', serif; font-size: 19px; color: white; }
-.pd-cta p { color: rgba(255,255,255,.6); font-size: 14px; line-height: 1.6; }
-.pd-cta-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-.btn-cta-call { background: white; color: var(--blue); border: none; border-radius: 8px; padding: 12px 22px; font-size: 14px; font-weight: 700; text-decoration: none; cursor: pointer; }
-.btn-cta-call:hover { opacity: .9; }
-.btn-cta-wa { background: #25D366; color: white; border: none; border-radius: 8px; padding: 12px 22px; font-size: 14px; font-weight: 700; text-decoration: none; }
-.btn-cta-wa:hover { background: #1ebe5a; }
+.wa-float { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; width: 54px; height: 54px; border-radius: 50%; font-size: 24px; text-decoration: none; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(0,0,0,.25); z-index: 999; transition: transform .2s, box-shadow .2s; }
+.wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(37,211,102,.5); }
 
 .why { background: var(--bg); }
 .why-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; max-width: 1100px; }
@@ -112,7 +93,6 @@ nav.scrolled { box-shadow: 0 2px 14px rgba(0,0,0,.08); }
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; max-width: 960px; margin-bottom: 36px; }
 .contact-items { display: flex; flex-direction: column; gap: 20px; }
 
-/* Contact person cards */
 .person-cards { display: flex; flex-direction: column; gap: 12px; }
 .person-card {
   background: white; border: 1.5px solid var(--border); border-radius: 12px;
@@ -138,8 +118,6 @@ nav.scrolled { box-shadow: 0 2px 14px rgba(0,0,0,.08); }
 .ci-ico { width: 40px; height: 40px; border-radius: 10px; background: var(--blue); display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
 .ci-label { font-size: 11px; font-weight: 700; color: var(--blue2); text-transform: uppercase; letter-spacing: 1px; }
 .ci-val { font-size: 15px; font-weight: 600; color: var(--text); line-height: 1.5; }
-.ci-val a { color: inherit; text-decoration: none; }
-.ci-val a:hover { color: var(--blue2); }
 
 .cta-box { background: var(--blue); border-radius: 14px; padding: 34px 28px; display: flex; flex-direction: column; gap: 14px; }
 .cta-box h4 { font-family: 'Playfair Display', serif; font-size: 21px; color: white; }
@@ -177,10 +155,9 @@ footer { background: var(--blue); color: rgba(255,255,255,.5); padding: 26px 5%;
 <body>
 
 <nav id="nav">
-  <div class="logo" onclick="showHome()">
+  <div class="logo" onclick="scrollToTop()">
     <div class="logo-icon">
       <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- E -->
         <text x="1" y="23" font-family="Georgia, serif" font-size="17" font-weight="900" fill="white" letter-spacing="-1">ES</text>
         <line x1="0" y1="28" x2="32" y2="28" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
       </svg>
@@ -191,310 +168,232 @@ footer { background: var(--blue); color: rgba(255,255,255,.5); padding: 26px 5%;
     </div>
   </div>
   <ul class="nav-links">
-    <li><a onclick="showHome(); setTimeout(()=>document.getElementById('products').scrollIntoView({behavior:'smooth'}),10)">Products</a></li>
-    <li><a onclick="showHome(); setTimeout(()=>document.getElementById('why').scrollIntoView({behavior:'smooth'}),10)">Why Us</a></li>
-    <li><a onclick="showHome(); setTimeout(()=>document.getElementById('brands').scrollIntoView({behavior:'smooth'}),10)">Brands</a></li>
-    <li><a onclick="showHome(); setTimeout(()=>document.getElementById('contact').scrollIntoView({behavior:'smooth'}),10)">Contact</a></li>
+    <!-- 2. MOBILE NAVBAR IMPROVEMENT: Added closeMenu() to onclick -->
+    <li><a onclick="scrollToSection('products'); closeMenu()">Products</a></li>
+    <li><a onclick="scrollToSection('why'); closeMenu()">Why Us</a></li>
+    <li><a onclick="scrollToSection('brands'); closeMenu()">Brands</a></li>
+    <li><a onclick="scrollToSection('contact'); closeMenu()">Contact</a></li>
   </ul>
   <a href="tel:8714824163" class="btn-call">📞 Call Now</a>
   <button class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></button>
 </nav>
 
-<!-- ══ HOME PAGE ══ -->
-<div id="home-page" class="page active">
-
-  <section class="hero">
-    <div class="hero-inner">
-      <div style="color:rgba(255,255,255,.5);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;">Ever Stone Associates</div>
-      <div class="hero-tag">📍 Pariyangad, Kozhikode</div>
-      <h1>Everything for Your Plumbing — One Shop, Best Price</h1>
-      <p>Pipes, taps, sanitary fittings and more. Walk in or call — we'll sort it out for you.</p>
-      <p style="color:rgba(255,255,255,.85);font-weight:600;font-size:14px;margin-bottom:30px;">✔ 10+ Years Experience &nbsp;|&nbsp; ✔ Available Today &nbsp;|&nbsp; ✔ Wholesale &amp; Retail</p>
-      <div class="hero-btns">
-        <button class="btn-white" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">View Products</button>
-        <a href="https://wa.me/918714824163?text=Hi%20I%20need%20details%20about%20your%20products" class="btn-white" target="_blank">WhatsApp Us</a>
-        <button class="btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Us</button>
-      </div>
-    </div>
-  </section>
-
-  <div class="trust">
-    <span>✅ ISI Certified Products</span>
-    <span>🏷️ Wholesale &amp; Retail</span>
-    <span>📦 Large In-Stock Range</span>
-    <span>🤝 Contractor Pricing Available</span>
-  </div>
-
-  <section class="section products" id="products">
-    <div class="sec-head reveal">
-      <div class="sec-label">What We Sell</div>
-      <h2 class="sec-title">Our Product Range</h2>
-      <p class="sec-sub">Tap any category to explore what we carry.</p>
-    </div>
-    <div class="products-grid">
-      <div class="product-card reveal" onclick="openProduct('pvc')">
-        <div class="product-img-placeholder">🔵</div>
-        <div class="product-head"><span class="p-name">PVC Pipes &amp; Fittings</span><span class="p-arrow">›</span></div>
-      </div>
-      <div class="product-card reveal" onclick="openProduct('cpvc')">
-        <div class="product-img-placeholder">🟠</div>
-        <div class="product-head"><span class="p-name">CPVC Pipes</span><span class="p-arrow">›</span></div>
-      </div>
-      <div class="product-card reveal" onclick="openProduct('taps')">
-        <div class="product-img-placeholder">🚿</div>
-        <div class="product-head"><span class="p-name">Taps &amp; Faucets</span><span class="p-arrow">›</span></div>
-      </div>
-      <div class="product-card reveal" onclick="openProduct('sanitary')">
-        <div class="product-img-placeholder">🛁</div>
-        <div class="product-head"><span class="p-name">Sanitary Ware</span><span class="p-arrow">›</span></div>
-      </div>
-      <div class="product-card reveal" onclick="openProduct('hardware')">
-        <div class="product-img-placeholder">🔩</div>
-        <div class="product-head"><span class="p-name">Hardware &amp; Valves</span><span class="p-arrow">›</span></div>
-      </div>
-      <div class="product-card reveal" onclick="openProduct('hoses')">
-        <div class="product-img-placeholder">🌊</div>
-        <div class="product-head"><span class="p-name">Hoses &amp; Flexible Pipes</span><span class="p-arrow">›</span></div>
-      </div>
-      <div class="product-card reveal" onclick="openProduct('pumps')">
-        <div class="product-img-placeholder">⚡</div>
-        <div class="product-head"><span class="p-name">Water Pumps &amp; Motors</span><span class="p-arrow">›</span></div>
-      </div>
-      <div class="product-card reveal" onclick="openProduct('tanks')">
-        <div class="product-img-placeholder">🪣</div>
-        <div class="product-head"><span class="p-name">Water Tanks</span><span class="p-arrow">›</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section why" id="why">
-    <div class="sec-head reveal">
-      <div class="sec-label">Why Us</div>
-      <h2 class="sec-title">Why Choose Ever Stone?</h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-card reveal">
-        <div class="w-icon">🏅</div>
-        <div class="w-title">Genuine Products</div>
-        <div class="w-text">We stock only authentic, ISI-certified products from authorised distributors.</div>
-      </div>
-      <div class="why-card reveal">
-        <div class="w-icon">💰</div>
-        <div class="w-title">Fair Pricing</div>
-        <div class="w-text">Competitive pricing for both retail customers and bulk contractor orders.</div>
-      </div>
-      <div class="why-card reveal">
-        <div class="w-icon">📦</div>
-        <div class="w-title">Wide Stock Range</div>
-        <div class="w-text">A large variety of plumbing &amp; sanitary products available in-store.</div>
-      </div>
-      <div class="why-card reveal">
-        <div class="w-icon">🧑‍🔧</div>
-        <div class="w-title">Expert Advice</div>
-        <div class="w-text">Our team helps you pick the right product for your project.</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section brands" id="brands">
-    <div class="sec-head reveal">
-      <div class="sec-label">Brands</div>
-      <h2 class="sec-title">Brands We Stock</h2>
-    </div>
-    <div class="brands-wrap reveal">
-      <div class="brand-tag">Astral Pipes</div><div class="brand-tag">Supreme</div>
-      <div class="brand-tag">Finolex</div><div class="brand-tag">Prince Pipes</div>
-      <div class="brand-tag">Jaquar</div><div class="brand-tag">Parryware</div>
-      <div class="brand-tag">Cera</div><div class="brand-tag">Hindware</div>
-      <div class="brand-tag">Sintex</div><div class="brand-tag">Kirloskar</div>
-      <div class="brand-tag">V-Guard</div>
-    </div>
-  </section>
-
-  <section class="section contact" id="contact">
-    <div class="sec-head reveal">
-      <div class="sec-label">Contact</div>
-      <h2 class="sec-title">Get In Touch</h2>
-    </div>
-    <div class="contact-grid">
-
-      <!-- Left: contact details -->
-      <div class="contact-items reveal">
-
-        <!-- Person cards -->
-        <div class="person-cards">
-          <div class="person-card">
-            <div class="person-info">
-              <span class="person-name">Prakash</span>
-              <span class="person-role">Ever Stone Associates</span>
-              <span class="person-num">8714 824 163</span>
-            </div>
-            <div class="person-actions">
-              <a href="tel:8714824163" title="Call Prakash">📞</a>
-              <a href="https://wa.me/918714824163?text=Hi%20I%20need%20details%20about%20your%20products" class="wa-btn" target="_blank" title="WhatsApp Prakash">💬</a>
-            </div>
-          </div>
-          <div class="person-card">
-            <div class="person-info">
-              <span class="person-name">Sunil</span>
-              <span class="person-role">Ever Stone Associates</span>
-              <span class="person-num">7736 923 355</span>
-            </div>
-            <div class="person-actions">
-              <a href="tel:7736923355" title="Call Sunil">📞</a>
-              <a href="https://wa.me/917736923355?text=Hi%20I%20need%20details%20about%20your%20products" class="wa-btn" target="_blank" title="WhatsApp Sunil">💬</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Address & hours -->
-        <div class="ci">
-          <div class="ci-ico">📍</div>
-          <div>
-            <div class="ci-label">Address</div>
-            <div class="ci-val">6/27A, Sarada Arcade, Pariyangad,<br>Cherukulathoor (P.O.),<br>Kozhikode – 673008</div>
-          </div>
-        </div>
-        <div class="ci">
-          <div class="ci-ico">⏰</div>
-          <div>
-            <div class="ci-label">Working Hours</div>
-            <div class="ci-val">Mon – Sat: 9:00 AM – 7:00 PM</div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Right: CTA box -->
-      <div class="cta-box reveal">
-        <h4>Need a quick quote?</h4>
-        <p>Tell us what you need — product name, size, or quantity — and we'll give you availability and price right away.</p>
-        <div class="cta-btns">
-          <a href="tel:8714824163" class="cta-call1">📞 Call Prakash — 8714 824 163</a>
-          <a href="tel:7736923355" class="cta-call2">📞 Call Sunil — 7736 923 355</a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Map pointing to Pariyangad, Kozhikode -->
-    <div class="map-wrap reveal">
-      <iframe
-        src="https://maps.google.com/maps?q=Pariyangad,Cherukulathoor,Kozhikode,Kerala&t=&z=15&ie=UTF8&iwloc=&output=embed"
-        loading="lazy" allowfullscreen>
-      </iframe>
-    </div>
-  </section>
-
-  <footer>
-    <div>
-      <div class="f-brand">Ever Stone Associates</div>
-      <div class="f-sub">6/27A Sarada Arcade, Pariyangad, Kozhikode – 673008</div>
-      <div class="f-sub" style="margin-top:2px">© 2026 · All rights reserved</div>
-    </div>
-    <div class="f-links">
-      <a onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Products</a>
-      <a onclick="document.getElementById('why').scrollIntoView({behavior:'smooth'})">Why Us</a>
-      <a onclick="document.getElementById('brands').scrollIntoView({behavior:'smooth'})">Brands</a>
-      <a onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact</a>
-    </div>
-  </footer>
-
-</div><!-- end home-page -->
-
-<!-- ══ PRODUCT DETAIL PAGE ══ -->
-<div id="product-page" class="page">
-  <div class="pd-header">
-    <button class="pd-back" onclick="showHome()">← Back to Products</button>
-    <span class="pd-icon" id="pd-icon"></span>
-    <div class="pd-title" id="pd-title"></div>
-    <div class="pd-subtitle" id="pd-subtitle"></div>
-  </div>
-  <div style="padding: 40px 5%; max-width: 960px; margin: 0 auto;">
-    <div class="pd-list-title">Available Items</div>
-    <div class="pd-items" id="pd-items"></div>
-    <div class="pd-cta">
-      <h4>Interested in these products?</h4>
-      <p>Call or WhatsApp us with the item name and we'll confirm price and availability immediately.</p>
-      <div class="pd-cta-btns">
-        <a href="tel:8714824163" class="btn-cta-call">📞 Prakash – 8714 824 163</a>
-        <a href="tel:7736923355" class="btn-cta-call">📞 Sunil – 7736 923 355</a>
-        <a href="https://wa.me/918714824163?text=Hi%2C%20I%20am%20interested%20in%20a%20product%20from%20Ever%20Stone%20Associates" class="btn-cta-wa" target="_blank">💬 Ask About This Product</a>
-      </div>
+<section class="hero">
+  <div class="hero-inner">
+    <div style="color:rgba(255,255,255,.5);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;">Ever Stone Associates</div>
+    <div class="hero-tag">📍 Pariyangad, Kozhikode</div>
+    <h1>Everything for Your Plumbing — One Shop, Best Price</h1>
+    <p>Pipes, taps, sanitary fittings and more. Walk in or call — we'll sort it out for you.</p>
+    <p style="color:rgba(255,255,255,.85);font-weight:600;font-size:14px;margin-bottom:30px;">✔ 10+ Years Experience &nbsp;|&nbsp; ✔ Available Today &nbsp;|&nbsp; ✔ Wholesale &amp; Retail</p>
+    <div class="hero-btns">
+      <button class="btn-white" onclick="scrollToSection('products')">View Products</button>
+      <a href="https://wa.me/918714824163?text=Hi%20I%20need%20details%20about%20your%20products" class="btn-white" target="_blank">WhatsApp Us</a>
+      <button class="btn-outline" onclick="scrollToSection('contact')">Contact Us</button>
     </div>
   </div>
+</section>
+
+<div class="trust">
+  <span>✅ ISI Certified Products</span>
+  <span>🏷️ Wholesale &amp; Retail</span>
+  <span>📦 Large In-Stock Range</span>
+  <span>🤝 Contractor Pricing Available</span>
 </div>
 
+<section class="section products" id="products">
+  <div class="sec-head reveal">
+    <div class="sec-label">What We Sell</div>
+    <h2 class="sec-title">Our Product Range</h2>
+    <p class="sec-sub">Real quality for your home.</p>
+  </div>
+  <div class="products-grid">
+    <!-- 1. IMAGE FOLDER STRUCTURE APPLIED -->
+    <div class="product-card reveal">
+      <div class="product-img" style="background-image: url('images/pvc.jpg')"></div>
+      <div class="product-head"><span class="p-name">PVC Pipes &amp; Fittings</span></div>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-img" style="background-image: url('images/cpvc.jpg')"></div>
+      <div class="product-head"><span class="p-name">CPVC Pipes</span></div>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-img" style="background-image: url('images/taps.jpg')"></div>
+      <div class="product-head"><span class="p-name">Taps &amp; Faucets</span></div>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-img" style="background-image: url('images/sanitary.jpg')"></div>
+      <div class="product-head"><span class="p-name">Sanitary Ware</span></div>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-img" style="background-image: url('images/manhole.jpg')"></div>
+      <div class="product-head"><span class="p-name">Manhole Covers</span></div>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-img" style="background-image: url('images/hardware.jpg')"></div>
+      <div class="product-head"><span class="p-name">Hardware &amp; Valves</span></div>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-img" style="background-image: url('images/tank.jpg')"></div>
+      <div class="product-head"><span class="p-name">Water Tanks</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section why" id="why">
+  <div class="sec-head reveal">
+    <div class="sec-label">Why Us</div>
+    <h2 class="sec-title">Why Choose Ever Stone?</h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <div class="w-icon">🏅</div>
+      <div class="w-title">Genuine Products</div>
+      <div class="w-text">We stock only authentic, ISI-certified products from authorised distributors.</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="w-icon">💰</div>
+      <div class="w-title">Fair Pricing</div>
+      <div class="w-text">Competitive pricing for both retail customers and bulk contractor orders.</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="w-icon">📦</div>
+      <div class="w-title">Wide Stock Range</div>
+      <div class="w-text">A large variety of plumbing &amp; sanitary products available in-store.</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="w-icon">🧑‍🔧</div>
+      <div class="w-title">Expert Advice</div>
+      <div class="w-text">Our team helps you pick the right product for your project.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section brands" id="brands">
+  <div class="sec-head reveal">
+    <div class="sec-label">Brands</div>
+    <h2 class="sec-title">Brands We Stock</h2>
+  </div>
+  <div class="brands-wrap reveal">
+    <div class="brand-tag">Astral Pipes</div><div class="brand-tag">Supreme</div>
+    <div class="brand-tag">Finolex</div><div class="brand-tag">Prince Pipes</div>
+    <div class="brand-tag">Jaquar</div><div class="brand-tag">Parryware</div>
+    <div class="brand-tag">Cera</div><div class="brand-tag">Hindware</div>
+    <div class="brand-tag">Sintex</div><div class="brand-tag">Kirloskar</div>
+    <div class="brand-tag">V-Guard</div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="sec-head reveal">
+    <div class="sec-label">Contact</div>
+    <h2 class="sec-title">Get In Touch</h2>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-items reveal">
+      <div class="person-cards">
+        <div class="person-card">
+          <div class="person-info">
+            <span class="person-name">Prakash</span>
+            <span class="person-role">Ever Stone Associates</span>
+            <span class="person-num">8714 824 163</span>
+          </div>
+          <div class="person-actions">
+            <a href="tel:8714824163" title="Call Prakash">📞</a>
+            <a href="https://wa.me/918714824163?text=Hi%20I%20need%20details%20about%20your%20products" class="wa-btn" target="_blank" title="WhatsApp Prakash">💬</a>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-info">
+            <span class="person-name">Sunil</span>
+            <span class="person-role">Ever Stone Associates</span>
+            <span class="person-num">7736 923 355</span>
+          </div>
+          <div class="person-actions">
+            <a href="tel:7736923355" title="Call Sunil">📞</a>
+            <a href="https://wa.me/917736923355?text=Hi%20I%20need%20details%20about%20your%20products" class="wa-btn" target="_blank" title="WhatsApp Sunil">💬</a>
+          </div>
+        </div>
+      </div>
+      <div class="ci">
+        <div class="ci-ico">📍</div>
+        <div>
+          <div class="ci-label">Address</div>
+          <div class="ci-val">6/27A, Sarada Arcade, Pariyangad,<br>Cherukulathoor (P.O.),<br>Kozhikode – 673008</div>
+        </div>
+      </div>
+      <div class="ci">
+        <div class="ci-ico">⏰</div>
+        <div>
+          <div class="ci-label">Working Hours</div>
+          <div class="ci-val">Mon – Sat: 9:00 AM – 7:00 PM</div>
+        </div>
+      </div>
+    </div>
+    <div class="cta-box reveal">
+      <h4>Need a quick quote?</h4>
+      <p>Tell us what you need — product name, size, or quantity — and we'll give you availability and price right away.</p>
+      <div class="cta-btns">
+        <a href="tel:8714824163" class="cta-call1">📞 Call Prakash — 8714 824 163</a>
+        <a href="tel:7736923355" class="cta-call2">📞 Call Sunil — 7736 923 355</a>
+      </div>
+    </div>
+  </div>
+  <div class="map-wrap reveal">
+    <!-- 6. GOOGLE MAPS (Exact shop coordinates would be added here) -->
+    <iframe
+      src="https://maps.google.com/maps?q=Pariyangad,Cherukulathoor,Kozhikode,Kerala&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      loading="lazy" allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <div class="f-brand">Ever Stone Associates</div>
+    <div class="f-sub">6/27A Sarada Arcade, Pariyangad, Kozhikode – 673008</div>
+    <div class="f-sub" style="margin-top:2px">© 2026 · All rights reserved</div>
+  </div>
+  <div class="f-links">
+    <a onclick="scrollToSection('products')">Products</a>
+    <a onclick="scrollToSection('why')">Why Us</a>
+    <a onclick="scrollToSection('brands')">Brands</a>
+    <a onclick="scrollToSection('contact')">Contact</a>
+  </div>
+</footer>
+
 <script>
-const products = {
-  pvc: {
-    icon: '🔵', title: 'PVC Pipes & Fittings',
-    subtitle: 'Standard and pressure-rated PVC for water supply, drainage and column applications.',
-    items: ['PVC Column Pipes','PVC Pressure Pipes (IS 4985)','SWR Pipes','SWR Fittings','Elbow','Tee','Reducer','Coupler','PVC Ball Valves','End Cap','Union']
-  },
-  cpvc: {
-    icon: '🟠', title: 'CPVC Pipes',
-    subtitle: 'For hot and cold water systems — heat resistant and pressure rated.',
-    items: ['CPVC Hot & Cold Water Pipes','CPVC Elbow','CPVC Tee','CPVC End Cap','CPVC Coupler','CPVC Ball Valve','CPVC Reducer']
-  },
-  taps: {
-    icon: '🚿', title: 'Taps & Faucets',
-    subtitle: 'Brass and chrome-plated tapware for kitchens and bathrooms.',
-    items: ['Pillar Taps (Brass)','Bib Taps','Mixer Taps','Sink Faucets','Shower Sets','Shower Heads','Health Faucets','Stop Cocks','Wall Mixers']
-  },
-  sanitary: {
-    icon: '🛁', title: 'Sanitary Ware',
-    subtitle: 'Complete bathroom sanitary fittings from leading brands.',
-    items: ['Western Closets (EWC)','Indian Closets','Wash Basins','Flush Tanks','Pedestal Sets','Cistern Fittings','Bottle Traps','P-Traps']
-  },
-  hardware: {
-    icon: '🔩', title: 'Hardware & Valves',
-    subtitle: 'GI and brass fittings, valves and plumbing hardware.',
-    items: ['Gate Valves (GI)','Gate Valves (Brass)','Ball Valves','Check Valves / NRV','GI Elbow','GI Nipple','GI Tee','Brass Connectors','Pipe Clamps','Hangers']
-  },
-  hoses: {
-    icon: '🌊', title: 'Hoses & Flexible Pipes',
-    subtitle: 'Flexible connections for bathrooms, kitchens and appliances.',
-    items: ['Braided Flexible Hoses','Garden Hoses (PVC)','Washing Machine Inlet Hose','Shower Hose','Connection Hose 12"','Connection Hose 18"','Connection Hose 24"']
-  },
-  pumps: {
-    icon: '⚡', title: 'Water Pumps & Motors',
-    subtitle: 'Domestic and commercial pumps for water transfer and pressurisation.',
-    items: ['Monoblock Pumps','Submersible Pumps','Jet Pumps','Booster Pumps','Self-Priming Pumps','Pump Accessories','Pressure Switches']
-  },
-  tanks: {
-    icon: '🪣', title: 'Water Tanks',
-    subtitle: 'ISI-marked overhead, loft and underground storage tanks.',
-    items: ['Overhead Tanks 500L','Overhead Tanks 1000L','Overhead Tanks 2000L','Overhead Tanks 5000L','Underground Sump Tanks','Loft Tanks','Tank Float Valves','Tank Fittings']
-  }
-};
-
-function showHome() {
-  document.getElementById('home-page').classList.add('active');
-  document.getElementById('product-page').classList.remove('active');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function openProduct(key) {
-  const p = products[key];
-  document.getElementById('pd-icon').textContent     = p.icon;
-  document.getElementById('pd-title').textContent    = p.title;
-  document.getElementById('pd-subtitle').textContent = p.subtitle;
-  document.getElementById('pd-items').innerHTML = p.items.map(i => `<div class="pd-item">${i}</div>`).join('');
-  document.getElementById('home-page').classList.remove('active');
-  document.getElementById('product-page').classList.add('active');
-  window.scrollTo({ top: 0, behavior: 'instant' });
-}
-
 window.addEventListener('scroll', () => {
   document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
 });
 
 function toggleNav() {
   const ul = document.querySelector('.nav-links');
-  const open = ul.style.display === 'flex';
-  ul.style.cssText = open ? '' :
-    'display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:white;padding:18px 5%;gap:14px;border-bottom:1.5px solid #d5e0ed;z-index:199;';
+  const isOpen = ul.style.display === 'flex';
+  
+  if (isOpen) {
+    closeMenu();
+  } else {
+    ul.style.cssText = 'display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:white;padding:18px 5%;gap:14px;border-bottom:1.5px solid #d5e0ed;z-index:199;';
+  }
+}
+
+// 2. MOBILE NAVBAR AUTO-CLOSE FUNCTION
+function closeMenu() {
+  const ul = document.querySelector('.nav-links');
+  if (window.innerWidth <= 768) {
+    ul.style.display = 'none';
+  }
+}
+
+function scrollToSection(id) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({behavior:'smooth'});
+  }
+}
+
+function scrollToTop() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
 const obs = new IntersectionObserver(entries => {
@@ -502,8 +401,7 @@ const obs = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
-<!-- Floating WhatsApp -->
-<a href="https://wa.me/918714824163?text=Hi%20I%20need%20details%20about%20your%20products" class="wa-float" target="_blank" title="Chat on WhatsApp">💬</a>
+<a href="https://wa.me/918714824163?text=Hi,%20I%20need%20details%20about%20your%20products.%20Can%20you%20please%20provide%20more%20information?" class="wa-float" target="_blank" title="Chat on WhatsApp">💬</a>
 
 </body>
 </html>
